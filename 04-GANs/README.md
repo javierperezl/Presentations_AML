@@ -4,10 +4,9 @@
 ### DCGAN
 
  1. Successfully train a generative model on a dataset of your choosing.
-* We consider a training as successful if both the generator and discriminator loss stabilizes over time and if the generated samples are somewhat reasable new samples of the dataset given a fixed input, avoiding mode collapse (generator giving the same output for any input).
+* We consider a training as successful if both the generator and discriminator loss stabilizes over time and if the generated samples are somewhat reasonable new samples of the dataset given a fixed input, avoiding mode collapse (generator giving the same output for any input).
 * Describe how the initial training went with the default parameters and a subset of the dataset, compare it to your most successful training and its corresponding modifications and justifications. 
 * (Bonus) Implement a suggested technique to improve DCGANs Training (e.g. Add noise to discriminator, label swapping, label  smoothing,etc.)
-* Help: We provided a preprocessing script for transforming any dataset to 64x64 images. A recommended dataset for DCGAN is CelebA
 
 #### Good samples example
 ![Good samples](https://raw.githubusercontent.com/IBIO4615-2019/Presentations_AML/master/04-GANs/assets/good_example.png)
@@ -18,10 +17,16 @@
 #### Stable training example
 ![Good training](https://raw.githubusercontent.com/IBIO4615-2019/Presentations_AML/master/04-GANs/assets/good_hist.png)
 
+* Help: We provided a preprocessing script for transforming any dataset to 64x64 images. A recommended dataset for DCGAN is CelebA
+
+
  2. Implement a training scheme in which the Generator and Discriminator “take turns” to update, report on how this new scheme affected the training process in comparison to the previous point.  Provide an explanation of the additions, the modified code and some generated examples.(e.g. Update the discriminator every 2 epochs, update the generator or discriminator after a given loss value.)
+ 
  
  3. Implement a condition version of the DCGAN, using the demo code as a basis, training to generate numbers with MNIST. Provide an explanation of the necessary additions, the modified code and some generated examples.
 * Recommendation: Use One Hot encoding  for the labels, the label y must be an additional input to the Generator and Discriminator.
+
+![cDCGAN](https://raw.githubusercontent.com/IBIO4615-2019/Presentations_AML/master/04-GANs/assets/Example-cDCGAN.png)
 
 #### data_loader
 
@@ -38,7 +43,7 @@
 
      for data, label in dataloader:
 
-![cDCGAN](https://raw.githubusercontent.com/IBIO4615-2019/Presentations_AML/master/04-GANs/assets/Example-cDCGAN.png)
+
 
 ### UGATIT
 
